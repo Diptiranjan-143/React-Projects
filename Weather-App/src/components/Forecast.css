@@ -1,0 +1,37 @@
+.forecast-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.forecast-card:hover {
+  transform: translateY(-5px);
+}
+
+.forecast-time {
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.forecast-icon {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.forecast-temp {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.forecast-details {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.9rem;
+  color: #666;
+}
