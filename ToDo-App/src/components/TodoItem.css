@@ -1,0 +1,232 @@
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 18px;
+    margin: 10px 0;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.todo-item:hover {
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.15);
+    border-color: #667eea;
+    transform: translateY(-2px);
+}
+
+.todo-text {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 16px;
+    word-break: break-word;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.todo-text:hover {
+    color: #667eea;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-edit,
+.btn-delete,
+.btn-save,
+.btn-cancel {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-edit {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);
+}
+
+.btn-edit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.btn-delete {
+    background: linear-gradient(135deg, #f44336 0%, #da190b 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(244, 67, 54, 0.2);
+}
+
+.btn-delete:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+}
+
+.edit-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.edit-input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 2px solid #667eea;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.edit-input:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.btn-save {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);
+}
+
+.btn-save:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.btn-cancel {
+    background: linear-gradient(135deg, #ff9800 0%, #fb8c00 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.2);
+}
+
+.btn-cancel:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .todo-item {
+        padding: 14px 12px;
+        flex-wrap: wrap;
+    }
+
+    .todo-text {
+        font-size: 14px;
+    }
+
+    .btn-edit,
+    .btn-delete,
+    .btn-save,
+    .btn-cancel {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .edit-container {
+        gap: 8px;
+    }
+}
+
+.btn-edit:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(76, 175, 80, 0.3);
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+    padding: 6px 10px;
+}
+
+.btn-delete:hover {
+    background-color: #da190b;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(244, 67, 54, 0.3);
+}
+
+.edit-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+}
+
+.edit-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 2px solid #4CAF50;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+}
+
+.edit-input:focus {
+    border-color: #45a049;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.btn-save {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-save:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(76, 175, 80, 0.3);
+}
+
+.btn-cancel {
+    background-color: #ff9800;
+    color: white;
+}
+
+.btn-cancel:hover {
+    background-color: #fb8c00;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(255, 152, 0, 0.3);
+}
